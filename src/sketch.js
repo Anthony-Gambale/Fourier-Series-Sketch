@@ -3,21 +3,21 @@
 let a;
 let b;
 let zero;
-let rot1;
-let rot2;
+let frames;
+let deltaTime;
 
 function setup () {
 
     // set global variables
-    a = new Complex (1,1);
+    a = new Complex (1,2);
     b = new Complex (1,0);
     zero = new Complex (0,0);
-    rot1 = new Complex (0.999847695, 0.017452406);
-    rot2 = rot1.power(5);
+    frames = 30;
+    deltaTime = 1 / frames;
 
     createCanvas (800, 600);
     stroke (255);
-    frameRate (30);
+    frameRate (frames);
 }
 
 function draw () {
@@ -26,10 +26,10 @@ function draw () {
 
     background (0);
 
-    a = a.mult(rot1);
-    b = b.mult(rot2);
+    a = a.rotate (PI, deltaTime);
+    b = b.rotate (PI*2, deltaTime);
 
-    drawComplex(zero,a);
-    drawComplex(a,b);
+    drawComplex (zero,a)
+    drawComplex (a,b);
     
 }

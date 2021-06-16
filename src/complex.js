@@ -1,4 +1,6 @@
 
+
+
 // Complex number class
 class Complex {
 
@@ -44,7 +46,27 @@ class Complex {
         }
         
     }
+
+    // a : angle in radians
+    // dt : change in time, in terms of seconds
+    // rotate the complex number by an amount such that after one second, it
+    // will have rotated through the given angle.
+    rotate (a, dt) {
+        return this.mult(angleComplex(a*dt));
+    }
 }
+
+
+
+// a : Double
+// Take an angle a, in radians, and make a unit length complex number such that
+// multiplying by this number has the effect of rotating a radians
+function angleComplex (a) {
+    
+    return new Complex (cos(a), sin(a))
+
+}
+
 
 
 // z : Complex
@@ -68,3 +90,5 @@ function drawComplex (s, z) {
     circle(50*sx, 50*sy, 50*2*r);
 
 }
+
+
