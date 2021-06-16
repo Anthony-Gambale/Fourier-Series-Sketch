@@ -13,6 +13,10 @@ class Complex {
         return new Complex(re, im);
     }
 
+    scale (k) {
+        return new Complex(k*this.re, k*this.im);
+    }
+
     mult (c) {
         const re = this.re * c.re - this.im * c.im; // since i squared = -1
         const im = this.re * c.im + this.im * c.re;
@@ -20,11 +24,11 @@ class Complex {
     }
 
     conjugate () {
-        return new Complex (this.re, -this.im);
+        return new Complex (this.re, -1 * this.im);
     }
 
     magnitude () {
-        return sqrt(this.mult(this.conjugate()));
+        return sqrt(this.mult(this.conjugate()).re);
     }
 
     vectorize () {
@@ -36,7 +40,7 @@ class Complex {
 // z : Complex
 // s : Complex
 // Draw z on the argand diagram, starting at the point s
-function drawComplex (z, s) {
+function drawComplex (s, z) {
 
     translate(width / 2, height / 2);
 
@@ -49,7 +53,9 @@ function drawComplex (z, s) {
     stroke (255);
     strokeWeight (2);
     
-    line(sx, sy, zx, zy);
-    circle(zx, zy, r*2);
+    // scale everything up, so a magnitude of 1 is 50 pixels on screen
+    line(50*sx, 50*sy, 50*zx, 50*zy);
+    noFill();
+    circle(50*sx, 50*sy, 50*2*r);
 
 }
