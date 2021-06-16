@@ -34,6 +34,16 @@ class Complex {
     vectorize () {
         return (this.re, this.im); // Turn a complex number into a coordinate pair
     }
+
+    power (n) {
+        if (n==0) {
+            return new Complex (1, 0); // The number 1
+        }
+        else {
+            return this.mult(this.power (n-1))
+        }
+        
+    }
 }
 
 
@@ -42,7 +52,6 @@ class Complex {
 // Draw z on the argand diagram, starting at the point s
 function drawComplex (s, z) {
 
-    translate(width / 2, height / 2);
 
     var r = z.magnitude();
     var sx = s.re;
@@ -51,7 +60,7 @@ function drawComplex (s, z) {
     var zy = (s.add(z)).im;
 
     stroke (255);
-    strokeWeight (2);
+    strokeWeight (1);
     
     // scale everything up, so a magnitude of 1 is 50 pixels on screen
     line(50*sx, 50*sy, 50*zx, 50*zy);
