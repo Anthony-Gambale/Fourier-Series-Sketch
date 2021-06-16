@@ -20,7 +20,7 @@ class Complex {
     }
 
     conjugate () {
-        return new Complex (this.re, -1 * this.im);
+        return new Complex (this.re, -this.im);
     }
 
     magnitude () {
@@ -38,9 +38,18 @@ class Complex {
 // Draw z on the argand diagram, starting at the point s
 function drawComplex (z, s) {
 
-    let (sx,sy) = s.vectorize();
-    let (zx,zy) = (z.add(c)).vectorize();
+    translate(width / 2, height / 2);
 
+    var r = z.magnitude();
+    var sx = s.re;
+    var sy = s.im;
+    var zx = (s.add(z)).re;
+    var zy = (s.add(z)).im;
+
+    stroke (255);
+    strokeWeight (2);
+    
     line(sx, sy, zx, zy);
+    circle(zx, zy, r*2);
 
 }
