@@ -31,5 +31,10 @@ function draw () {
 
     drawComplex (zero,a)
     drawComplex (a,b);
-    
+
+
+    // test the numeric integration.
+    // let f(t) = e^i2t, or just v(t, 2).
+
+        
 }
