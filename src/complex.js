@@ -62,9 +62,7 @@ class Complex {
 // Take an angle a, in radians, and make a unit length complex number such that
 // multiplying by this number has the effect of rotating a radians
 function e_to_the_i (a) {
-    
     return new Complex (cos(a), sin(a))
-
 }
 
 
