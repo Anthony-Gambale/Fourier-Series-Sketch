@@ -15,26 +15,20 @@ function setup () {
     frames = 30;
     deltaTime = 1 / frames;
 
-    createCanvas (800, 600);
+    createCanvas (800,600);
     stroke (255);
     frameRate (frames);
+
+    testNumericIntegration ();
 }
 
 function draw () {
 
-    translate(width / 2, height / 2);
+    translate (width/2,height/2);
 
     background (0);
 
-    a = a.rotate (PI, deltaTime);
-    b = b.rotate (PI*2, deltaTime);
+    [a,b] = testDrawing (deltaTime,a,b);
 
-    drawComplex (zero,a)
-    drawComplex (a,b);
-
-
-    // test the numeric integration.
-    // let f(t) = e^i2t, or just v(t, 2).
-
-        
+       
 }
