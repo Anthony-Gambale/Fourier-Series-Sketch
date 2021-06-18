@@ -52,7 +52,7 @@ class Complex {
     // rotate the complex number by an amount such that after one second, it
     // will have rotated through the given angle.
     rotate (a, dt) {
-        return this.mult(angleComplex(a*dt));
+        return this.mult(e_to_the_i(a*dt));
     }
 }
 
@@ -61,7 +61,7 @@ class Complex {
 // a : Double
 // Take an angle a, in radians, and make a unit length complex number such that
 // multiplying by this number has the effect of rotating a radians
-function angleComplex (a) {
+function e_to_the_i (a) {
     
     return new Complex (cos(a), sin(a))
 
