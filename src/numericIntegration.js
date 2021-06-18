@@ -17,7 +17,7 @@ class ImageData {
 // n : integer
 // t : double
 // the 'v' function as detailed on the readme.
-function v(n, t) {
+function v (n, t) {
     return e_to_the_i (n * t);
 }
 
@@ -33,14 +33,14 @@ function numericIntegral (img, n) {
     var dt = TAU / L;
 
     // Take the integral
-    var sum = 0;
+    var sum = new Complex (0,0);
 
     for (var t = 0; t < L; t++) {
         var v_minus_n = v(-n, t * dt);
         var nextTerm = f[t].mult(v_minus_n).scale(dt);
-        sum += nextTerm;
+        sum = sum.add(nextTerm);
     }
 
-    return sum / TAU;
+    return sum.scale(1/TAU);
 
 }
