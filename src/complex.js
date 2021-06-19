@@ -54,6 +54,12 @@ class Complex {
     rotate (a, dt) {
         return this.mult(e_to_the_i(a*dt));
     }
+
+    // round the real and imaginary components
+    round () {
+        this.re = Math.round(100 * this.re) / 100;
+        this.im = Math.round(100 * this.im) / 100;
+    }
 }
 
 

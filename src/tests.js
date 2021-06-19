@@ -30,7 +30,7 @@ function testNumericIntegration () {
         f.append (c.mult(v (2,t)));
     }
 
-    i1 = numericIntegral (f,-2); // this should give back c
+    i1 = numericIntegral (f,2); // this should give back c
     i2 = numericIntegral (f,1); // this should give 0
 
     console.log(i1, i2);
