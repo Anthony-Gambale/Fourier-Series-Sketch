@@ -36,3 +36,25 @@ function testNumericIntegration () {
     console.log(i1, i2);
 
 }
+
+
+// test the fourier transform
+function testFourierTransform () {
+
+    // generate a curve. make it a simple curve with only one frequency in it.
+    f = new ImageData ([]);
+    c = new Complex (2, 3);
+    n = 100;
+    dt = TAU / n;
+
+    for (i = 0; i < n; i++) {
+        t = i * dt;
+        f.append (c.mult(v (2,t)));
+    }
+
+    // compute and print its fourier transform. should be all zeroes except for the
+    // 2 hz frequency, which should give back the constant c.
+    coefficients = fourierTransform (f);
+
+
+}
