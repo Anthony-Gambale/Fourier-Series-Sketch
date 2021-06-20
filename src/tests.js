@@ -59,3 +59,27 @@ function testFourierTransform () {
     console.log (coefficients);
 
 }
+
+
+// test the fourier transform on a more difficult curve
+function testFourierTransform2 () {
+
+    // generate a curve. make it a simple curve with only one frequency in it.
+    f = new ImageData ([]);
+    c = new Complex (2, 3);
+    n = 100;
+    dt = TAU / n;
+
+    for (i = 0; i < n; i++) {
+        t = i * dt;
+        part1 = c.mult(v (2,t));
+        part2 = v(3,t);
+        f.append (part1.add(part2));
+    }
+
+    // compute and print its fourier transform. should be all zeroes except for the
+    // 2 hz frequency, which should give back the constant c.
+    coefficients = fourierTransform (f);
+    console.log (coefficients);
+
+}

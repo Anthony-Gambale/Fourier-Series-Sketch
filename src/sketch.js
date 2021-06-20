@@ -20,7 +20,7 @@ function setup () {
     stroke (255);
     frameRate (frames);
 
-    testNumericIntegration ();
+    // testNumericIntegration ();
 
     testFourierTransform ();
 }

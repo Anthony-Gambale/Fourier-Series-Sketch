@@ -1,10 +1,10 @@
 
 /*
 
- [ ] Original function
+ [ ] Allow the user to draw a curve to be processed
  [x] Numeric integration
- [ ] Iterate numeric integration to generate array of magnitudes for frequency
- [ ] Reconstruct original function from frequencies
+ [x] Iterate numeric integration to generate array of magnitudes for frequency
+ [ ] Redraw original function from frequencies
 
 */
 
@@ -16,7 +16,7 @@ function fourierTransform (img) {
     fourier_coefficients = []
 
     // need to know how many frequencies there will be
-    n = 10
+    n = 60;
 
     // find all the frequencies, from the negative end to the positive
     // end, plus constant term (n=0) coefficient, and push them to
@@ -28,5 +28,7 @@ function fourierTransform (img) {
         fourier_coefficients.push (c_j);
 
     }
+
+    return fourier_coefficients;
 
 }
