@@ -7,7 +7,6 @@ function runTests () {
     testRounding ();
     testFourierTransform ();
     testFourierTransform2 ();
-    testCurveDraw ();
 
 }
 

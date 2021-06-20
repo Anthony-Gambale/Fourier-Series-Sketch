@@ -41,7 +41,7 @@ function fourierTransform (img) {
 // n : the number of fourier coefficients on either side of the 0 coeff, as used by fourierTransform
 // t : the number of time steps passed
 // dt : the amount of time in each time step 
-function drawFourier (coefficients, n, t, dt) {
+function drawFourier (coefficients, n, t, dt, trail) {
 
     // t is number of frames passed
     // dt is amount of 'time' (distance from 0 to 2pi) to pass in 1 timestep
@@ -60,8 +60,11 @@ function drawFourier (coefficients, n, t, dt) {
         drawComplex (currentTip, jth_term);
 
         currentTip = currentTip.add(jth_term);
-
-
     }
+
+    trail.push (currentTip.vectorize ());
+    drawCurve (trail);
+
+    return trail;
 
 }

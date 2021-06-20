@@ -34,7 +34,7 @@ class Complex {
     }
 
     vectorize () {
-        return (this.re, this.im); // Turn a complex number into a coordinate pair
+        return [this.re*50, this.im*50]; // Turn a complex number into a coordinate pair
     }
 
     power (n) {
@@ -87,12 +87,13 @@ function drawComplex (s, z) {
     var zx = (s.add(z)).re;
     var zy = (s.add(z)).im;
 
-    stroke (255);
-    strokeWeight (1);
-    
     // scale everything up, so a magnitude of 1 is 50 pixels on screen
+    stroke (255);
+    strokeWeight (2);
     line(50*sx, 50*sy, 50*zx, 50*zy);
     noFill();
+    strokeWeight (1);
+    stroke (100);
     circle(50*sx, 50*sy, 50*2*r);
 
 }
@@ -101,7 +102,7 @@ function drawComplex (s, z) {
 // take a list of x,y points called points, and connect the dots in the order given.
 function drawCurve (points) {
 
-    stroke (255);
+    stroke (color (0,255,0));
     strokeWeight (3);
 
     for (i = 0; i < points.length - 1; i++) {
@@ -110,7 +111,8 @@ function drawCurve (points) {
         line (x1,y1,x2,y2);
     }
 
-    [x0,y0] = points[0];
-    [xl,yl] = points[points.length - 1];
-    line (xl,yl,x0,y0);
+    // connect the final two points
+    // [x0,y0] = points[0];
+    // [xl,yl] = points[points.length - 1];
+    // line (xl,yl,x0,y0);
 }

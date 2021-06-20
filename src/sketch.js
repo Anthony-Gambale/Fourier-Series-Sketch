@@ -7,6 +7,7 @@ let frames;
 let seconds;
 let t;
 let slow;
+let trail;
 
 
 function setup () {
@@ -16,14 +17,15 @@ function setup () {
     b = new Complex (1,0);
     zero = new Complex (0,0);
 
-    frames = 30;
+    frames = 60;
     seconds = 1 / frames;
     t = 0; 
     
     slow = 10; // constant to slow down time
 
+    trail = []; // trail left by fourier pencil
+
     createCanvas (800,600);
-    stroke (255);
     frameRate (frames);
 
     // tests
@@ -41,14 +43,16 @@ function setup () {
 
 function draw () {
 
-    translate (width/2,height/2);
     background (0);
+    stroke (255);
+    translate (width/2,height/2);
+    
 
     // general drawing test
     // [a,b] = testDrawing (seconds, a, b);
 
     t = Math.min (frames*slow, t+1);
 
-    drawFourier (curve2coeffs, n2, t, TAU / (frames*slow));
+    trail = drawFourier (curve2coeffs, n2, t, TAU / (frames*slow), trail);
 
 }
