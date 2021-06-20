@@ -4,7 +4,7 @@ let a;
 let b;
 let zero;
 let frames;
-let deltaTime;
+let seconds;
 
 
 function setup () {
@@ -14,7 +14,7 @@ function setup () {
     b = new Complex (1,0);
     zero = new Complex (0,0);
     frames = 30;
-    deltaTime = 1 / frames;
+    seconds = 1 / frames;
 
     createCanvas (800,600);
     stroke (255);
@@ -22,7 +22,14 @@ function setup () {
 
     // tests
     runTests ();
-    
+
+    // random curves for testing the fourier transform drawing device
+    // plus their fourier transforms
+    curve1 = exampleCurve1 ();
+    curve2 = exampleCurve2 ();
+    curve1coeffs = fourierTransform (curve1);
+    curve2coeffs = fourierTransform (curve2);
+        
 }
 
 
@@ -31,6 +38,9 @@ function draw () {
     translate (width/2,height/2);
     background (0);
 
-    
+    // general drawing test
+    // [a,b] = testDrawing (seconds, a, b);
+
+
 
 }
