@@ -46,7 +46,7 @@ function setup () {
 
     trail = []; // trail left by fourier pencil
 
-    createCanvas (800,600);
+    createCanvas (1920,1080);
     frameRate (frames);
 
     // tests
@@ -72,16 +72,21 @@ function draw () {
     // general drawing test
     // [a,b] = testDrawing (seconds, a, b);
 
-    t = Math.min (frames*slow, t+1);
+    t++;
 
     if (!inputMode)
     {
-        trail = drawFourier (curve2coeffs, n2, t, TAU / (frames*slow), trail);
+        trail = drawFourier (fourierCoefficients, n, t, TAU / (frames*slow), trail);
     }
     else if (mouseIsPressed)
     {
-        curve.push ([mouseX, mouseY]);
-        complexCurve.append(new Complex (mouseX/50, mouseY/50));
+
+        var newx = mouseX - width/2;
+        var newy = mouseY - height/2;
+        curve.push ([newx, newy]);
+        complexCurve.append(new Complex (newx/50, newy/50));
+
+        drawCurve (curve);
     }
     
 }
@@ -93,6 +98,6 @@ function mouseReleased () {
     inputMode = false;
 
     // do some computation
-    
+    [n, fourierCoefficients] = fourierTransform (complexCurve);
 
 }
