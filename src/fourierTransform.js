@@ -9,6 +9,8 @@
 */
 
 
+// From some image data, through numeric integration, compute the complex coefficients
+// for all possible frequencies of rotating vectors.
 function fourierTransform (img) {
 
     // a list of complex numbered coefficients for all the different
@@ -30,5 +32,35 @@ function fourierTransform (img) {
     }
 
     return fourier_coefficients;
+
+}
+
+
+// coefficients : the coefficients of the fourier transform, as outputted by fourierTransform
+// n : the number of fourier coefficients on either side of the 0 coeff, as used by fourierTransform
+// t : the number of time steps passed
+// dt : the amount of time in each time step 
+function drawFourier (coefficients, n, t, dt) {
+
+    // t is number of frames passed
+    // dt is amount of 'time' (distance from 0 to 2pi) to pass in 1 timestep
+    // note when currentTime reaches 2pi we are done
+    currentTime = t * dt;
+    
+    // keep track of the tip of all the current stacked vectors
+    // whenever stacking a new vector on top of the prior ones, push currentTip
+    // up to the top of the stack again
+    currentTip = new Complex (0,0);
+
+    for (j = -n; j <= n; j++) {
+
+        var jth_term = v(j, currentTime).mult(coefficients[j]);
+
+        drawComplex (currentTip, jth_term);
+
+        currentTip = currentTip.add(jth_term);
+
+    }
+
 
 }

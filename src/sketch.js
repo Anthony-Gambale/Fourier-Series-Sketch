@@ -22,6 +22,7 @@ function setup () {
 
     // tests
     runTests ();
+    
 }
 
 
@@ -30,6 +31,6 @@ function draw () {
     translate (width/2,height/2);
     background (0);
 
-    [a,b] = testDrawing (deltaTime,a,b);
+    
 
 }

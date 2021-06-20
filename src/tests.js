@@ -11,20 +11,6 @@ function runTests () {
 }
 
 
-// test drawing of complex numbers, plus rotation
-function testDrawing (deltaTime, a, b) {
-
-    a = a.rotate (PI, deltaTime);
-    b = b.rotate (PI*2, deltaTime);
-
-    drawComplex (zero,a)
-    drawComplex (a,b);
-
-    return [a,b];
-
-}
-
-
 // test of numeric integration: make sure it returns constants as
 // appropriate, and 0 as appropriate.
 function testNumericIntegration () {
@@ -53,15 +39,7 @@ function testNumericIntegration () {
 function testFourierTransform () {
 
     // generate a curve. make it a simple curve with only one frequency in it.
-    f = new ImageData ([]);
-    c = new Complex (2, 3);
-    n = 100;
-    dt = TAU / n;
-
-    for (i = 0; i < n; i++) {
-        t = i * dt;
-        f.append (c.mult(v (2,t)));
-    }
+    f = exampleCurve1 ();
 
     // compute and print its fourier transform. should be all zeroes except for the
     // 2 hz frequency, which should give back the constant c.
@@ -76,17 +54,7 @@ function testFourierTransform () {
 function testFourierTransform2 () {
 
     // generate a curve. make it a simple curve with only one frequency in it.
-    f = new ImageData ([]);
-    c = new Complex (2, 3);
-    n = 100;
-    dt = TAU / n;
-
-    for (i = 0; i < n; i++) {
-        t = i * dt;
-        part1 = c.mult(v (2,t));
-        part2 = v(3,t);
-        f.append (part1.add(part2));
-    }
+    f = exampleCurve2 ();
 
     // compute and print its fourier transform. should be all zeroes except for the
     // 2 hz frequency, which should give back the constant c.
@@ -105,4 +73,62 @@ function testRounding () {
     console.log (tinyComplex);
     console.log (tinyComplex.round());
 
+}
+
+
+// test drawing of complex numbers, plus rotation
+function testDrawing (deltaTime, a, b) {
+
+    a = a.rotate (PI, deltaTime);
+    b = b.rotate (PI*2, deltaTime);
+
+    drawComplex (zero,a)
+    drawComplex (a,b);
+
+    return [a,b];
+
+}
+
+
+// test of drawFourier: the function which draws a fourier transform after its coefficients
+// are computed.
+function testDrawFourier (coefficients, n, t, dt) {
+
+    drawFourier (coefficients, n, t, dt);
+
+}
+
+
+// simple example curve with one frequency
+function exampleCurve1 () {
+
+    f = new ImageData ([]);
+    c = new Complex (2, 3);
+    n = 100;
+    dt = TAU / n;
+
+    for (i = 0; i < n; i++) {
+        t = i * dt;
+        f.append (c.mult(v (2,t)));
+    }
+
+    return f
+}
+
+
+// more complicated example curve, with two frequencies
+function exampleCurve2 () {
+
+    new ImageData ([]);
+    c = new Complex (2, 3);
+    n = 100;
+    dt = TAU / n;
+
+    for (i = 0; i < n; i++) {
+        t = i * dt;
+        part1 = c.mult(v (2,t));
+        part2 = v(3,t);
+        f.append (part1.add(part2));
+    }
+    
 }
