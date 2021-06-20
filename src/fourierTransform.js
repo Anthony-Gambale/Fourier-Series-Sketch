@@ -4,7 +4,7 @@
  [ ] Allow the user to draw a curve which can be made into an imagData object
  [x] Numeric integration
  [x] Iterate numeric integration to generate array of magnitudes for frequency
- [ ] Redraw original function from frequencies
+ [x] Redraw original function from frequencies
 
 */
 
@@ -51,10 +51,10 @@ function drawFourier (coefficients, n, t, dt) {
     // whenever stacking a new vector on top of the prior ones, push currentTip
     // up to the top of the stack again
     currentTip = new Complex (0,0);
-
+    
     for (j = -n; j <= n; j++) {
 
-        var jth_term = v(j, currentTime).mult(coefficients[j]);
+        var jth_term = v(j, currentTime).mult(coefficients[j+n]);
 
         drawComplex (currentTip, jth_term);
 

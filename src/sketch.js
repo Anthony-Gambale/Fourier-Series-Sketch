@@ -46,6 +46,6 @@ function draw () {
 
     t = Math.min (frames, t+1);
 
-    drawFourier (curve1coeffs, 50, t, TAU / frames);
+    drawFourier (curve2coeffs, 50, t, TAU / frames);
 
 }
