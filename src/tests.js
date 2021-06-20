@@ -56,5 +56,4 @@ function testFourierTransform () {
     // 2 hz frequency, which should give back the constant c.
     coefficients = fourierTransform (f);
 
-
 }
