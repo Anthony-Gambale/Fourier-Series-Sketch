@@ -1,4 +1,7 @@
 
+// Anthony Gambale
+// June 2021
+
 // initialize global variables
 let a;
 let b;
