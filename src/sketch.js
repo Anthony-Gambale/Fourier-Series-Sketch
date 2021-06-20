@@ -3,22 +3,40 @@
 // June 2021
 
 // initialize global variables
-let a;
-let b;
-let zero;
+// let a;
+// let b;
+// let zero;
+let curve;
+let complexCurve;
+let fourierCoefficients;
+let n;
 let frames;
 let seconds;
 let t;
 let slow;
 let trail;
+let inputMode;
 
 
 function setup () {
 
     // set global variables
-    a = new Complex (1,2);
-    b = new Complex (1,0);
-    zero = new Complex (0,0);
+    inputMode = true;
+
+    // for testing
+    // a = new Complex (1,2);
+    // b = new Complex (1,0);
+    // zero = new Complex (0,0);
+
+    // fill with points when drawn
+    curve = [];
+    // convert curve to complex form when finished being drawn
+    complexCurve = new ImageData ([]);
+    // initialize the fourier coeffs
+    fourierCoefficients = [];
+    // initialize the number of points
+    n = 0;
+
 
     frames = 60;
     seconds = 1 / frames;
@@ -32,14 +50,14 @@ function setup () {
     frameRate (frames);
 
     // tests
-    runTests ();
+    // runTests ();
 
     // random curves for testing the fourier transform drawing device
     // plus their fourier transforms
-    curve1 = exampleCurve1 ();
-    curve2 = exampleCurve2 ();
-    [n1, curve1coeffs] = fourierTransform (curve1);
-    [n2, curve2coeffs] = fourierTransform (curve2);
+    // curve1 = exampleCurve1 ();
+    // curve2 = exampleCurve2 ();
+    // [n1, curve1coeffs] = fourierTransform (curve1);
+    // [n2, curve2coeffs] = fourierTransform (curve2);
         
 }
 
@@ -56,6 +74,25 @@ function draw () {
 
     t = Math.min (frames*slow, t+1);
 
-    trail = drawFourier (curve2coeffs, n2, t, TAU / (frames*slow), trail);
+    if (!inputMode)
+    {
+        trail = drawFourier (curve2coeffs, n2, t, TAU / (frames*slow), trail);
+    }
+    else if (mouseIsPressed)
+    {
+        curve.push ([mouseX, mouseY]);
+        complexCurve.append(new Complex (mouseX/50, mouseY/50));
+    }
+    
+}
+
+
+function mouseReleased () {
+
+    // change the mode of the program
+    inputMode = false;
+
+    // do some computation
+    
 
 }
