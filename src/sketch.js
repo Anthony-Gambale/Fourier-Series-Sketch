@@ -6,6 +6,7 @@ let zero;
 let frames;
 let deltaTime;
 
+
 function setup () {
 
     // set global variables
@@ -24,11 +25,12 @@ function setup () {
     testFourierTransform ();
 }
 
+
 function draw () {
 
     translate (width/2,height/2);
     background (0);
-    
+
     [a,b] = testDrawing (deltaTime,a,b);
-       
+
 }

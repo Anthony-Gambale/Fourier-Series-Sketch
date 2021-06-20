@@ -15,8 +15,18 @@ function fourierTransform (img) {
     // frequencies in the range of the image
     fourier_coefficients = []
 
-    n = Math.floor(img.data.length / 2);
+    // need to know how many frequencies there will be
+    n = 10
 
-    console.log (n);
+    // find all the frequencies, from the negative end to the positive
+    // end, plus constant term (n=0) coefficient, and push them to
+    // the fourier_coefficients list
+    for (j = -n; j <= n; j++) {
+
+        c_j = numericIntegral (img, j);
+
+        fourier_coefficients.push (c_j);
+
+    }
 
 }

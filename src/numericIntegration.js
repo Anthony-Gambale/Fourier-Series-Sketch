@@ -41,6 +41,6 @@ function numericIntegral (img, n) {
         sum = sum.add(nextTerm);
     }
 
-    return sum.scale(1/TAU);
+    return sum.scale(1 / TAU);
 
 }
