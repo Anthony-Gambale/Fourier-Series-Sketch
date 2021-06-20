@@ -103,7 +103,7 @@ function drawComplex (s, z) {
 function drawCurve (points) {
 
     stroke (color (50,120,255));
-    strokeWeight (3);
+    strokeWeight (2);
 
     for (i = 0; i < points.length - 1; i++) {
         [x1,y1] = points[i];
