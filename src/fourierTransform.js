@@ -25,7 +25,7 @@ function fourierTransform (img) {
 
         c_j = numericIntegral (img, j);
 
-        fourier_coefficients.push (c_j);
+        fourier_coefficients.push (c_j.round());
 
     }
 
