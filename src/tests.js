@@ -1,5 +1,16 @@
 
 
+// run all tests that don't need the draw() step
+function runTests () {
+
+    testNumericIntegration ();
+    testRounding ();
+    testFourierTransform ();
+    testFourierTransform2 ();
+
+}
+
+
 // test drawing of complex numbers, plus rotation
 function testDrawing (deltaTime, a, b) {
 
@@ -81,5 +92,17 @@ function testFourierTransform2 () {
     // 2 hz frequency, which should give back the constant c.
     coefficients = fourierTransform (f);
     console.log (coefficients);
+
+}
+
+
+// test the rounding function on complex numbers
+// for making the gross 3.2822652342972840e-16 things just be 0
+function testRounding () {
+
+    var tinyNumber = 2385206 / 1000000000000000000000000000;
+    var tinyComplex = new Complex (tinyNumber, tinyNumber*2)
+    console.log (tinyComplex);
+    console.log (tinyComplex.round());
 
 }

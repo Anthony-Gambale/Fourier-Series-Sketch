@@ -57,8 +57,9 @@ class Complex {
 
     // round the real and imaginary components
     round () {
-        this.re = Math.round(100 * this.re) / 100;
-        this.im = Math.round(100 * this.im) / 100;
+        var real = Math.round(100 * this.re) / 100;
+        var imag = Math.round(100 * this.im) / 100;
+        return new Complex (real, imag);
     }
 }
 

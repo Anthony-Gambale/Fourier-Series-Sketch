@@ -20,9 +20,8 @@ function setup () {
     stroke (255);
     frameRate (frames);
 
-    // testNumericIntegration ();
-
-    testFourierTransform2 ();
+    // tests
+    runTests ();
 }
 
 
@@ -34,3 +33,5 @@ function draw () {
     [a,b] = testDrawing (deltaTime,a,b);
 
 }
+
+
