@@ -33,5 +33,3 @@ function draw () {
     [a,b] = testDrawing (deltaTime,a,b);
 
 }
-
-
