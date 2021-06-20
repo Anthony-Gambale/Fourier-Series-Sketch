@@ -16,7 +16,7 @@ function fourierTransform (img) {
     fourier_coefficients = []
 
     // need to know how many frequencies there will be
-    n = 60;
+    n = 10;
 
     // find all the frequencies, from the negative end to the positive
     // end, plus constant term (n=0) coefficient, and push them to

@@ -22,7 +22,7 @@ function setup () {
 
     // testNumericIntegration ();
 
-    testFourierTransform ();
+    testFourierTransform2 ();
 }
 
 
