@@ -6,6 +6,7 @@ let zero;
 let frames;
 let seconds;
 let t;
+let slow;
 
 
 function setup () {
@@ -17,7 +18,9 @@ function setup () {
 
     frames = 30;
     seconds = 1 / frames;
-    t = 0;    
+    t = 0; 
+    
+    slow = 10; // constant to slow down time
 
     createCanvas (800,600);
     stroke (255);
@@ -44,8 +47,8 @@ function draw () {
     // general drawing test
     // [a,b] = testDrawing (seconds, a, b);
 
-    t = Math.min (frames, t+1);
+    t = Math.min (frames*slow, t+1);
 
-    drawFourier (curve2coeffs, 50, t, TAU / frames);
+    drawFourier (curve2coeffs, 50, t, TAU / (frames*slow));
 
 }

@@ -62,5 +62,4 @@ function drawFourier (coefficients, n, t, dt) {
 
     }
 
-
 }
