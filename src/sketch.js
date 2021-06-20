@@ -33,8 +33,8 @@ function setup () {
     // plus their fourier transforms
     curve1 = exampleCurve1 ();
     curve2 = exampleCurve2 ();
-    curve1coeffs = fourierTransform (curve1);
-    curve2coeffs = fourierTransform (curve2);
+    [n1, curve1coeffs] = fourierTransform (curve1);
+    [n2, curve2coeffs] = fourierTransform (curve2);
         
 }
 
@@ -49,6 +49,6 @@ function draw () {
 
     t = Math.min (frames*slow, t+1);
 
-    drawFourier (curve2coeffs, 50, t, TAU / (frames*slow));
+    drawFourier (curve2coeffs, n2, t, TAU / (frames*slow));
 
 }

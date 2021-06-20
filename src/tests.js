@@ -7,6 +7,7 @@ function runTests () {
     testRounding ();
     testFourierTransform ();
     testFourierTransform2 ();
+    testCurveDraw ();
 
 }
 
@@ -86,6 +87,16 @@ function testDrawing (deltaTime, a, b) {
     drawComplex (a,b);
 
     return [a,b];
+
+}
+
+
+// test curve draw
+function testCurveDraw () {
+    
+    points = exampleCurve2 ().convert ();
+
+    drawCurve (points);
 
 }
 

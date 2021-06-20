@@ -18,7 +18,7 @@ function fourierTransform (img) {
     fourier_coefficients = []
 
     // need to know how many frequencies there will be
-    n = 50;
+    n = Math.floor(img.data.length / 2);
 
     // find all the frequencies, from the negative end to the positive
     // end, plus constant term (n=0) coefficient, and push them to
@@ -31,7 +31,8 @@ function fourierTransform (img) {
 
     }
 
-    return fourier_coefficients;
+    // return n as well, since its useful for other functions
+    return [n, fourier_coefficients];
 
 }
 
@@ -59,6 +60,7 @@ function drawFourier (coefficients, n, t, dt) {
         drawComplex (currentTip, jth_term);
 
         currentTip = currentTip.add(jth_term);
+
 
     }
 

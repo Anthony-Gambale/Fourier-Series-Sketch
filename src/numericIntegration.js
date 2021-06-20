@@ -11,6 +11,15 @@ class ImageData {
         this.data.push (point);
     }
 
+    // convert into x,y coords as opposed to complex numbers
+    convert () {
+        var pts = [];
+        for (i = 0; i < this.data.length; i++) {
+            pts.push ([50*this.data[i].re, 50*this.data[i].im]);
+        }
+        return pts;
+    }
+
 }
 
 

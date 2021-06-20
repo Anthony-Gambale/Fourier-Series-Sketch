@@ -42,7 +42,7 @@ class Complex {
             return new Complex (1, 0); // The number 1
         }
         else {
-            return this.mult(this.power (n-1))
+            return this.mult(this.power (n-1));
         }
         
     }
@@ -81,7 +81,6 @@ function e_to_the_i (a) {
 // Draw z on the argand diagram, starting at the point s
 function drawComplex (s, z) {
 
-
     var r = z.magnitude();
     var sx = s.re;
     var sy = s.im;
@@ -96,4 +95,22 @@ function drawComplex (s, z) {
     noFill();
     circle(50*sx, 50*sy, 50*2*r);
 
+}
+
+
+// take a list of x,y points called points, and connect the dots in the order given.
+function drawCurve (points) {
+
+    stroke (255);
+    strokeWeight (3);
+
+    for (i = 0; i < points.length - 1; i++) {
+        [x1,y1] = points[i];
+        [x2,y2] = points[i+1];
+        line (x1,y1,x2,y2);
+    }
+
+    [x0,y0] = points[0];
+    [xl,yl] = points[points.length - 1];
+    line (xl,yl,x0,y0);
 }
