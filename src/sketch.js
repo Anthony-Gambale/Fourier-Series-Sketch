@@ -42,11 +42,11 @@ function setup () {
     seconds = 1 / frames;
     t = 0; 
     
-    slow = 10; // constant to slow down time
+    slow = 20; // constant to slow down time
 
     trail = []; // trail left by fourier pencil
 
-    createCanvas (1920,1080);
+    createCanvas (1600,800);
     frameRate (frames);
 
     // tests
@@ -58,16 +58,15 @@ function setup () {
     // curve2 = exampleCurve2 ();
     // [n1, curve1coeffs] = fourierTransform (curve1);
     // [n2, curve2coeffs] = fourierTransform (curve2);
-        
 }
 
 
 function draw () {
 
     background (0);
-    stroke (255);
     translate (width/2,height/2);
-    
+    axes ();
+       
 
     // general drawing test
     // [a,b] = testDrawing (seconds, a, b);
@@ -99,5 +98,19 @@ function mouseReleased () {
 
     // do some computation
     [n, fourierCoefficients] = fourierTransform (complexCurve);
+
+}
+
+
+function axes () {
+
+    strokeWeight (1);
+    stroke (100);
+
+    ww = width / 2;
+    wh = height / 2;
+
+    line (0, -wh, 0, wh);
+    line (-ww, 0, ww, 0);
 
 }

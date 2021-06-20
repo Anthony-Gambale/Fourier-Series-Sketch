@@ -93,7 +93,7 @@ function drawComplex (s, z) {
     line(50*sx, 50*sy, 50*zx, 50*zy);
     noFill();
     strokeWeight (1);
-    stroke (100);
+    stroke (50);
     circle(50*sx, 50*sy, 50*2*r);
 
 }
@@ -102,7 +102,7 @@ function drawComplex (s, z) {
 // take a list of x,y points called points, and connect the dots in the order given.
 function drawCurve (points) {
 
-    stroke (color (0,255,0));
+    stroke (color (50,120,255));
     strokeWeight (3);
 
     for (i = 0; i < points.length - 1; i++) {
