@@ -53,6 +53,8 @@ function drawFourier (coefficients, n, t, dt, trail) {
     // up to the top of the stack again
     currentTip = new Complex (0,0);
     
+    drawCurve (trail);
+
     for (j = -n; j <= n; j++) {
 
         var jth_term = v(j, currentTime).mult(coefficients[j+n]);
@@ -63,7 +65,6 @@ function drawFourier (coefficients, n, t, dt, trail) {
     }
 
     trail.push (currentTip.vectorize ());
-    drawCurve (trail);
 
     return trail;
 
