@@ -97,5 +97,3 @@ function drawComplex (s, z) {
     circle(50*sx, 50*sy, 50*2*r);
 
 }
-
-

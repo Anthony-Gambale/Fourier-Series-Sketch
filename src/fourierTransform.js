@@ -1,7 +1,7 @@
 
 /*
 
- [ ] Allow the user to draw a curve to be processed
+ [ ] Allow the user to draw a curve which can be made into an imagData object
  [x] Numeric integration
  [x] Iterate numeric integration to generate array of magnitudes for frequency
  [ ] Redraw original function from frequencies
