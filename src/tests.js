@@ -90,15 +90,6 @@ function testDrawing (deltaTime, a, b) {
 }
 
 
-// test of drawFourier: the function which draws a fourier transform after its coefficients
-// are computed.
-function testDrawFourier (coefficients, n, t, dt) {
-
-    drawFourier (coefficients, n, t, dt);
-
-}
-
-
 // simple example curve with one frequency
 function exampleCurve1 () {
 

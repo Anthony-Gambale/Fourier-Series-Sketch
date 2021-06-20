@@ -5,6 +5,7 @@ let b;
 let zero;
 let frames;
 let seconds;
+let t;
 
 
 function setup () {
@@ -13,8 +14,10 @@ function setup () {
     a = new Complex (1,2);
     b = new Complex (1,0);
     zero = new Complex (0,0);
+
     frames = 30;
     seconds = 1 / frames;
+    t = 0;    
 
     createCanvas (800,600);
     stroke (255);
@@ -41,6 +44,8 @@ function draw () {
     // general drawing test
     // [a,b] = testDrawing (seconds, a, b);
 
+    t = Math.min (frames, t+1);
 
+    drawFourier (curve1coeffs, 50, t, TAU / frames);
 
 }
