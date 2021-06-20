@@ -119,7 +119,7 @@ function exampleCurve1 () {
 // more complicated example curve, with two frequencies
 function exampleCurve2 () {
 
-    new ImageData ([]);
+    f = new ImageData ([]);
     c = new Complex (2, 3);
     n = 200;
     dt = TAU / n;
