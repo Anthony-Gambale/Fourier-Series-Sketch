@@ -104,7 +104,7 @@ function exampleCurve1 () {
 
     f = new ImageData ([]);
     c = new Complex (2, 3);
-    n = 100;
+    n = 200;
     dt = TAU / n;
 
     for (i = 0; i < n; i++) {
@@ -112,7 +112,7 @@ function exampleCurve1 () {
         f.append (c.mult(v (2,t)));
     }
 
-    return f
+    return f;
 }
 
 
@@ -121,7 +121,7 @@ function exampleCurve2 () {
 
     new ImageData ([]);
     c = new Complex (2, 3);
-    n = 100;
+    n = 200;
     dt = TAU / n;
 
     for (i = 0; i < n; i++) {
@@ -130,5 +130,7 @@ function exampleCurve2 () {
         part2 = v(3,t);
         f.append (part1.add(part2));
     }
+
+    return f;
     
 }
