@@ -2,7 +2,6 @@
 This program allows the user to draw any curve. It then breaks the curve into rotating vectors of different frequencies and lengths using numeric integration, and re-constructs the curve by animating the tip-to-tail sum of these vectors.
 
 ![image](https://github.com/Anthony-Gambale/Fourier-Transform-Sketch/blob/main/screenshot1.png)
-
 ![image](https://github.com/Anthony-Gambale/Fourier-Transform-Sketch/blob/main/screenshot2.png)
 
 ### Install and Run
