@@ -13,3 +13,7 @@ Simply download all files in the repository, and open index.html in any browser.
 ## Fourier Transform Integral
 
 ## Numeric Integral Approximation
+
+## Sources
+ - https://youtu.be/r6sGWTCMz2k
+ - https://youtu.be/2hfoX51f6sg
