@@ -75,6 +75,7 @@ function draw () {
     {
         if (t <= frames*slow*2) {
             refresh ();
+
             trail = drawFourier (fourierCoefficients, n, t, TAU / (frames*slow), trail);
         }
     }
