@@ -3,6 +3,8 @@ This program allows the user to draw any curve. It then breaks the curve into ro
 
 ![image](https://github.com/Anthony-Gambale/Fourier-Transform-Sketch/blob/main/screenshot1.png)
 
+![image](https://github.com/Anthony-Gambale/Fourier-Transform-Sketch/blob/main/screenshot2.png)
+
 ### Install and Run
 Simply download all files in the repository, and open index.html in any browser. Then draw any closed curve you like. This program does not need to be run on a server to function properly.
 
