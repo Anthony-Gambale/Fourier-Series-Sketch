@@ -15,5 +15,7 @@ Simply download all files in the repository, and open index.html in any browser.
 ## Numeric Integral Approximation
 
 ## Sources
- - https://youtu.be/r6sGWTCMz2k
- - https://youtu.be/2hfoX51f6sg
+ - Grant Sanderson's video on fourier series with complex coefficients  
+ https://youtu.be/r6sGWTCMz2k
+ - GoldPlatedProof's video on the same topic  
+ https://youtu.be/2hfoX51f6sg
