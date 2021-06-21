@@ -5,3 +5,11 @@ This program allows the user to draw any curve. It then breaks the curve into ro
 
 ### Install and Run
 Simply download all files in the repository, and open index.html in any browser. Then draw any closed curve you like. This program does not need to be run on a server to function properly.
+
+# How it Works
+
+## Rotating Vectors
+
+## Fourier Transform Integral
+
+## Numeric Integral Approximation
