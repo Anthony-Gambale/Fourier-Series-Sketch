@@ -15,7 +15,7 @@ To be precise, we define the user's drawing as a function, from the real numbers
 At some given time t, f(t) will be the point on the complex plane that was drawn at time t. When t reaches 2pi, the full curve has been drawn. 
 
 ## Rotating Vectors
-First, we must define some machinery for what it means to have a 'rotating vector.' We define a function v of an integer parameter n as
+First, we must define some machinery for what it means to have a 'rotating vector.' We define a function v of an integer parameter n as  
 ![image](https://github.com/Anthony-Gambale/Fourier-Transform-Sketch/blob/main/images/definitionRotation.png)  
 This gives us a complex valued function that draws n full circles as the time t moves through 0 to 2pi. Since this function has the same structure as the way we defined the function for the user's drawing, we now have the building blocks required to try re-create it.
 
