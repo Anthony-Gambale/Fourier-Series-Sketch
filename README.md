@@ -10,7 +10,7 @@ Simply download all files in the repository, and open index.html in any browser.
 # How it Works
 This program takes any curve drawn by the user, and breaks it up into a sum of simple rotating vectors.
 
-To be precise, we define the user's drawing as a function, from the real numbers to the complex numbers. We call this function f.
+To be precise, we define the user's drawing as a function, from the real numbers to the complex numbers. We call this function f.  
 ![image](https://github.com/Anthony-Gambale/Fourier-Transform-Sketch/blob/main/images/definitionCurve.png)  
 At some given time t, f(t) will be the point on the complex plane that was drawn at time t. When t reaches 2pi, the full curve has been drawn. 
 
