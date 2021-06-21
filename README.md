@@ -1,5 +1,5 @@
 # Fourier-Transform-Sketch
-This program allows the user to draw any curve. It then breaks the curve into rotating vectors of different frequencies and lengths using numeric integration, and re-constructs the curve by animating the tip-to-tail sum of these vectors.
+This program decomposes curves into rotating vectors of different frequencies and lengths using numeric integration, and re-constructs the curve by animating the tip-to-tail sum of these vectors.
 
 ![image](https://github.com/Anthony-Gambale/Fourier-Transform-Sketch/blob/main/screenshot1.png)
 ![image](https://github.com/Anthony-Gambale/Fourier-Transform-Sketch/blob/main/screenshot2.png)
@@ -8,7 +8,7 @@ This program allows the user to draw any curve. It then breaks the curve into ro
 Simply download all files in the repository, and open index.html in any browser. Then draw any closed curve you like. This program does not need to be run on a server to function properly.
 
 # How it Works
-As stated above, this is a process that generates an approximation of a complex-valued function by computing a sum of rotating vectors, of different frequencies, magnitudes and starting points.
+This program takes any curve drawn by the user, and breaks it up into a sum of simple rotating vectors.
 
 To be precise, we define the user's drawing as a function, from the real numbers to the complex numbers. We call this function f.
 ![image](https://github.com/Anthony-Gambale/Fourier-Transform-Sketch/blob/main/definitionCurve.png)  
