@@ -63,10 +63,8 @@ function setup () {
 
 function draw () {
 
-    background (0);
     translate (width/2,height/2);
-    axes ();
-       
+    
 
     // general drawing test
     // [a,b] = testDrawing (seconds, a, b);
@@ -75,17 +73,22 @@ function draw () {
 
     if (!inputMode)
     {
-        trail = drawFourier (fourierCoefficients, n, t, TAU / (frames*slow), trail);
+        if (t <= frames*slow*2) {
+            refresh ();
+            trail = drawFourier (fourierCoefficients, n, t, TAU / (frames*slow), trail);
+        }
     }
-    else if (mouseIsPressed)
+    else
     {
+        refresh ();
+        if (mouseIsPressed) {
+            var newx = mouseX - width/2;
+            var newy = mouseY - height/2;
+            curve.push ([newx, newy]);
+            complexCurve.append(new Complex (newx/50, newy/50));
 
-        var newx = mouseX - width/2;
-        var newy = mouseY - height/2;
-        curve.push ([newx, newy]);
-        complexCurve.append(new Complex (newx/50, newy/50));
-
-        drawCurve (curve);
+            drawCurve (curve);
+        }
     }
     
 }
@@ -113,4 +116,10 @@ function axes () {
     line (0, -wh, 0, wh);
     line (-ww, 0, ww, 0);
 
+}
+
+
+function refresh () {
+    background (0);
+    axes ();
 }
