@@ -20,7 +20,8 @@ We define a function v of an integer parameter n as
 ![image](https://github.com/Anthony-Gambale/Fourier-Transform-Sketch/blob/main/images/definitionRotation.png)  
 This is a complex valued function that will draw a full circle n times, as the time t moves from 0 through to 2pi. Since this function has the same structure as the way we defined f, we can use multiple different v functions to reconstruct it.
 
-![image](https://github.com/Anthony-Gambale/Fourier-Transform-Sketch/blob/main/images/rotatingVectors.png)
+![image](https://github.com/Anthony-Gambale/Fourier-Transform-Sketch/blob/main/images/rotatingVectors1.png)  
+![image](https://github.com/Anthony-Gambale/Fourier-Transform-Sketch/blob/main/images/rotatingVectors2.png)  
 
 ## Fourier Transform Integral
 
