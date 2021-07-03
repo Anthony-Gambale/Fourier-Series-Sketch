@@ -13,15 +13,19 @@ Simply download all files in the repository, and open index.html in any browser.
 This program takes any curve drawn by the user, and breaks it up into a sum of simple rotating vectors.
 
 To be precise, we define the user's drawing as a function, from the real numbers to the complex numbers. We call this function f.  
+  
 ![image](https://github.com/Anthony-Gambale/Fourier-Transform-Sketch/blob/main/images/definitionCurve.png)  
+  
 At some given time t, f(t) will be the point on the complex plane that was drawn at time t. When t passes through the full interval, the whole curve has been drawn. The choice of 0 to 2pi makes the coming math work out much cleaner.
 
 ## Rotating Vectors
 First, we must define some machinery for what it means to have a 'rotating vector.' We will create a function with the same structur as f to represent a circle being drawn as time passes through the interval from 0 to 2pi.  
 We define a function v of an integer parameter n as  
+  
 ![image](https://github.com/Anthony-Gambale/Fourier-Transform-Sketch/blob/main/images/definitionRotation.png)  
+  
 This is a complex valued function that will draw a full circle n times, as the time t moves from 0 through to 2pi. Since this function has the same structure as the way we defined f, we can use multiple different v functions to reconstruct it.
-
+  
 ![image](https://github.com/Anthony-Gambale/Fourier-Transform-Sketch/blob/main/images/rotatingVectors1.png)  
 ![image](https://github.com/Anthony-Gambale/Fourier-Transform-Sketch/blob/main/images/rotatingVectors2.png)  
 
