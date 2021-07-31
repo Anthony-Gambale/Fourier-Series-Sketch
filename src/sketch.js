@@ -91,7 +91,6 @@ function draw () {
             drawCurve (curve);
         }
     }
-    
 }
 
 
