@@ -1,14 +1,4 @@
 
-/*
-
- [ ] Allow the user to draw a curve which can be made into an imagData object
- [x] Numeric integration
- [x] Iterate numeric integration to generate array of magnitudes for frequency
- [x] Redraw original function from frequencies
-
-*/
-
-
 // From some image data, through numeric integration, compute the complex coefficients
 // for all possible frequencies of rotating vectors.
 function fourierTransform (img) {
