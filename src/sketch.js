@@ -65,7 +65,6 @@ function draw () {
 
     translate (width/2,height/2);
     
-
     // general drawing test
     // [a,b] = testDrawing (seconds, a, b);
 
@@ -73,25 +72,23 @@ function draw () {
 
     if (!inputMode)
     {
-        if (t <= frames*slow*2) {
+        if (trail.length < 0xffff) { // cap trail size at arbitrary number so the website doesn't crash
             refresh ();
-
             trail = drawFourier (fourierCoefficients, n, t, TAU / (frames*slow), trail);
         }
     }
     else
     {
         refresh ();
+        tutorialText ();
         if (mouseIsPressed) {
             var newx = mouseX - width/2;
             var newy = mouseY - height/2;
             curve.push ([newx, newy]);
             complexCurve.append(new Complex (newx/50, newy/50));
-
             drawCurve (curve);
         }
-    }
-    
+    }   
 }
 
 
@@ -123,4 +120,11 @@ function axes () {
 function refresh () {
     background (0);
     axes ();
+}
+
+
+function tutorialText () {
+    textSize(15);
+    fill(255,255,255);
+    text('Draw a closed loop on the screen by clicking and dragging your mouse.', 10 - width/2, 20 - height/2);
 }
