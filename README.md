@@ -5,6 +5,3 @@ This program takes any curve as input, and approximates it using rotating vector
 <!--- ![image](https://github.com/Anthony-Gambale/Fourier-Transform-Sketch/blob/main/images/screenshot1.png) --->
 <!--- ![image](https://github.com/Anthony-Gambale/Fourier-Transform-Sketch/blob/main/images/screenshot2.png) --->
 https://anthony-gambale.github.io/Fourier-Transform-Sketch/
-
-### Install and Run
-Simply download all files in the repository, and open index.html in any browser. Then draw any closed curve you like. This program does not need to be run on a server to function properly.
