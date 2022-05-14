@@ -4,4 +4,4 @@ This program takes any curve as input, and approximates it using rotating vector
 ![fourier](https://user-images.githubusercontent.com/44384508/124254812-cbf95c80-db6c-11eb-89f1-a733aac97d7a.gif)
 <!--- ![image](https://github.com/Anthony-Gambale/Fourier-Transform-Sketch/blob/main/images/screenshot1.png) --->
 <!--- ![image](https://github.com/Anthony-Gambale/Fourier-Transform-Sketch/blob/main/images/screenshot2.png) --->
-https://anthony-gambale.github.io/Fourier-Transform-Sketch/
+https://anthony-gambale.github.io/Fourier-Series-Sketch/
