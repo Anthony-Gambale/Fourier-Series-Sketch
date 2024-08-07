@@ -3,10 +3,7 @@ This program takes any curve as input, and approximates it using rotating vector
 
 Try it here: https://anthony-gambale.github.io/Fourier-Series-Sketch/
 
-<p align="center">
-  <img src="https://github.com/Anthony-Gambale/Fourier-Transform-Sketch/blob/main/images/screenshot1.png" width="50%" alt="Screenshot 1">
-</p>
-
-<p align="center">
-  <img src="https://github.com/Anthony-Gambale/Fourier-Transform-Sketch/blob/main/images/screenshot2.png" width="50%" alt="Screenshot 2">
-</p>
+<div style="display: flex; justify-content: center; gap: 10px;">
+  <img src="https://github.com/Anthony-Gambale/Fourier-Transform-Sketch/blob/main/images/screenshot1.png" width="45%" alt="Screenshot 1">
+  <img src="https://github.com/Anthony-Gambale/Fourier-Transform-Sketch/blob/main/images/screenshot2.png" width="45%" alt="Screenshot 2">
+</div>
