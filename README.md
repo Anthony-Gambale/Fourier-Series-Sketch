@@ -1,5 +1,5 @@
 # Fourier-Series-Sketch
-Using complex-valued fourier transform to draw shapes. Try it here: https://anthony-gambale.github.io/Fourier-Series-Sketch/
+Using fourier transform to draw shapes. Try it here: https://anthony-gambale.github.io/Fourier-Series-Sketch/
 
 ![fourier](https://user-images.githubusercontent.com/44384508/124254812-cbf95c80-db6c-11eb-89f1-a733aac97d7a.gif)
 
