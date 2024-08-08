@@ -49,6 +49,6 @@ Try it here: https://anthony-gambale.github.io/Fourier-Series-Sketch/
   <img src="https://github.com/Anthony-Gambale/Fourier-Transform-Sketch/blob/main/images/fig8.png" width="100%" alt="Figure 1">
 </div>
 
-<div style="display: flex; justify-content: center; text-align: center; gap: 10px;">
+<p align="center">
   <img src="https://github.com/Anthony-Gambale/Fourier-Transform-Sketch/blob/main/images/fig9.png" width="60%" alt="Figure 1">
-</div>
+</p>
