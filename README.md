@@ -34,7 +34,7 @@ Try it here: https://anthony-gambale.github.io/Fourier-Series-Sketch/
 </div>
 
 <div style="display: flex; justify-content: center; gap: 10px;">
-  <img src="https://github.com/Anthony-Gambale/Fourier-Transform-Sketch/blob/main/images/fig6.png" width="100%" alt="Figure 1">
+  <img src="https://github.com/Anthony-Gambale/Fourier-Transform-Sketch/blob/main/images/fig6.png" width="70%" alt="Figure 1">
 </div>
 
 <div style="display: flex; justify-content: center; gap: 10px;">
@@ -42,7 +42,7 @@ Try it here: https://anthony-gambale.github.io/Fourier-Series-Sketch/
 </div>
 
 <div style="display: flex; justify-content: center; gap: 10px;">
-  <img src="https://github.com/Anthony-Gambale/Fourier-Transform-Sketch/blob/main/images/fig7b.png" width="100%" alt="Figure 1">
+  <img src="https://github.com/Anthony-Gambale/Fourier-Transform-Sketch/blob/main/images/fig7b.png" width="70%" alt="Figure 1">
 </div>
 
 <div style="display: flex; justify-content: center; gap: 10px;">
@@ -50,5 +50,5 @@ Try it here: https://anthony-gambale.github.io/Fourier-Series-Sketch/
 </div>
 
 <div style="display: flex; justify-content: center; gap: 10px;">
-  <img src="https://github.com/Anthony-Gambale/Fourier-Transform-Sketch/blob/main/images/fig9.png" width="100%" alt="Figure 1">
+  <img src="https://github.com/Anthony-Gambale/Fourier-Transform-Sketch/blob/main/images/fig9.png" width="60%" alt="Figure 1">
 </div>
