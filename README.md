@@ -1,12 +1,9 @@
 # Fourier-Series-Sketch
-This program takes any curve as input, and approximates it using rotating vectors of different frequencies and lengths using the complex-valued fourier transform. It then re-constructs the curve by animating the tip-to-tail sum of these vectors.
+Using complex-valued fourier transform to draw shapes. Try it here: https://anthony-gambale.github.io/Fourier-Series-Sketch/
 
-Try it here: https://anthony-gambale.github.io/Fourier-Series-Sketch/
+![fourier](https://user-images.githubusercontent.com/44384508/124254812-cbf95c80-db6c-11eb-89f1-a733aac97d7a.gif)
 
-<div style="display: flex; justify-content: center; gap: 10px;">
-  <img src="https://github.com/Anthony-Gambale/Fourier-Transform-Sketch/blob/main/images/screenshot1.png" width="45%" alt="Screenshot 1">
-  <img src="https://github.com/Anthony-Gambale/Fourier-Transform-Sketch/blob/main/images/screenshot2.png" width="45%" alt="Screenshot 2">
-</div>
+### Explainer
 
 We model the image drawn by the user using a series of samples of mouse positions, which can be thought of as a complex function `f` as follows.
 
@@ -73,3 +70,7 @@ Therefore, we can find each coefficient by numerically integrating our dataset o
 <p align="center">
   <img src="https://github.com/Anthony-Gambale/Fourier-Transform-Sketch/blob/main/images/fig9.png" width="60%" alt="Figure 1">
 </p>
+
+### References
+
+The 3Blue1Brown video on the topic is where I learned all of this. It's much better than my own explainer, you can find it here https://youtu.be/r6sGWTCMz2k.
